@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Ficha Médica</title>
-    <!-- Agregar los enlaces a los archivos CSS y JS de Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -77,7 +76,7 @@
 
     <script>
         function validarFormulario() {
-            // Realiza aquí tus validaciones para cada campo
+           
             var rut = document.getElementById("rut").value;
             var nombres = document.getElementById("nombres").value;
             var apellidos = document.getElementById("apellidos").value;
@@ -88,20 +87,20 @@
             var fechaNacimiento = document.getElementById("fechaNacimiento").value;
             var estadoCivil = document.getElementById("estadoCivil").value;
 
-            // Ejemplo de validación de campo obligatorio (puedes agregar más validaciones)
+            // Ejemplo de validación de campo obligatorio 
             if (rut === "" || nombres === "" || apellidos === "" || direccion === "" || ciudad === "" || telefono === "" || email === "" || fechaNacimiento === "" || estadoCivil === "") {
                 alert("Todos los campos son obligatorios.");
                 return false;
             }
 
-            // Agrega aquí más validaciones según tus necesidades
+           
 
             return true; // El formulario es válido si todas las validaciones pasan
         }
 
         function guardarRegistro() {
             if (validarFormulario()) {
-                // Aquí puedes realizar la acción de guardar en la base de datos
+                
                 alert("Registro guardado correctamente.");
             }
         }
