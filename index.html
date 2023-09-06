@@ -68,11 +68,51 @@
             </div>
 
             <div class="text-center">
-                <button type="button" class="btn btn-primary" id="guardar">Guardar</button>
-                <button type="button" class="btn btn-secondary" id="limpiar">Limpiar</button>
-                <button type="button" class="btn btn-danger" id="cerrar">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="guardar" onclick="guardarRegistro()">Guardar</button>
+                <button type="button" class="btn btn-secondary" id="limpiar" onclick="limpiarFormulario()">Limpiar</button>
+                <button type="button" class="btn btn-danger" id="cerrar" onclick="cerrarVentana()">Cerrar</button>
             </div>
         </form>
     </div>
+
+    <script>
+        function validarFormulario() {
+            // Realiza aquí tus validaciones para cada campo
+            var rut = document.getElementById("rut").value;
+            var nombres = document.getElementById("nombres").value;
+            var apellidos = document.getElementById("apellidos").value;
+            var direccion = document.getElementById("direccion").value;
+            var ciudad = document.getElementById("ciudad").value;
+            var telefono = document.getElementById("telefono").value;
+            var email = document.getElementById("email").value;
+            var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+            var estadoCivil = document.getElementById("estadoCivil").value;
+
+            // Ejemplo de validación de campo obligatorio (puedes agregar más validaciones)
+            if (rut === "" || nombres === "" || apellidos === "" || direccion === "" || ciudad === "" || telefono === "" || email === "" || fechaNacimiento === "" || estadoCivil === "") {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            }
+
+            // Agrega aquí más validaciones según tus necesidades
+
+            return true; // El formulario es válido si todas las validaciones pasan
+        }
+
+        function guardarRegistro() {
+            if (validarFormulario()) {
+                // Aquí puedes realizar la acción de guardar en la base de datos
+                alert("Registro guardado correctamente.");
+            }
+        }
+
+        function limpiarFormulario() {
+            document.getElementById("medicalForm").reset();
+        }
+
+        function cerrarVentana() {
+            window.close();
+        }
+    </script>
 </body>
 </html>
