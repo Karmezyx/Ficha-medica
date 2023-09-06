@@ -2,57 +2,49 @@
 <html>
 <head>
     <title>Ficha Médica</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Agregar los enlaces a los archivos CSS y JS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>Ficha Médica</h1>
-    <form id="medicalForm">
-        <label for="rut">Rut:</label>
-        <input type="text" id="rut" name="rut" required><br>
+    <div class="container mt-5">
+        <h1 class="text-center">Ficha Médica</h1>
+        <form id="medicalForm">
+            <div class="form-group">
+                <label for="rut">Rut:</label>
+                <input type="text" class="form-control" id="rut" name="rut" required>
+            </div>
 
-        <label for="nombres">Nombres:</label>
-        <input type="text" id="nombres" name="nombres" required><br>
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" class="form-control" id="nombres" name="nombres" required>
+            </div>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos" required><br>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+            </div>
 
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" required><br>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" required>
+            </div>
 
-        <label for="ciudad">Ciudad:</label>
-        <input type="text" id="ciudad" name="ciudad" required><br>
+            <!-- Repite este bloque para los demás campos -->
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br>
+            <div class="form-group">
+                <label for="comentarios">Comentarios:</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
-
-        <label for="estadoCivil">Estado civil:</label>
-        <select id="estadoCivil" name="estadoCivil" required>
-            <option value="soltero">Soltero</option>
-            <option value="casado">Casado</option>
-            <option value="divorciado">Divorciado</option>
-            <option value="viudo">Viudo</option>
-        </select><br>
-
-        <label for="comentarios">Comentarios:</label>
-        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br>
-
-        <button type="button" id="guardar">Guardar</button>
-        <button type="button" id="limpiar">Limpiar</button>
-        <button type="button" id="cerrar">Cerrar</button>
-    </form>
-
-    <h2>Buscar por Apellido</h2>
-    <input type="text" id="buscarApellido">
-    <button type="button" id="buscar">Buscar</button>
-
-    <div id="resultadoBusqueda"></div>
-
-    <script src="script.js"></script>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" id="guardar">Guardar</button>
+                <button type="button" class="btn btn-secondary" id="limpiar">Limpiar</button>
+                <button type="button" class="btn btn-danger" id="cerrar">Cerrar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
